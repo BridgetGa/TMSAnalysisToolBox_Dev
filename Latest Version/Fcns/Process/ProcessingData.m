@@ -47,7 +47,7 @@ for i=app.ProcessOrderListBox.ItemsData
     switch i
 
         case 1 %Down sample
-            [DataTime,Data,newSampleRate]=ProcessDownSample(DataTime,Data,app.FactorEditField.Value,app.AllSampleRate(1));
+            [DataTime,Data,newSampleRate]=ProcessDownSample(app,DataTime,Data,app.FactorEditField.Value,app.AllSampleRate(1));
             app.SampleRateLabel.Text=['Sample Rate: ' num2str(newSampleRate) 'Hz'];
             %app.AllSampleRate
             app.ProcessOrder{x,2}=app.FactorEditField.Value;

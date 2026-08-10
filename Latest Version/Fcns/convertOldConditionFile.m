@@ -69,7 +69,7 @@ end
 minTimeRange=min(TimeRanges(:,1));
 maxTimeRange=max(TimeRanges(:,2));
 
-%create time base on the smallest and largest time
+%create time base on the smallest and largest time - assumes all conditions have the same sample rate
 newTime=minTimeRange:1/Old.sampleRate:maxTimeRange;
 
 newConditions_Data=cell(numConditions,length(New.ConditionsData(1,:))+1);
